@@ -12,7 +12,7 @@ app = FastAPI(title="DevTranslate API")
 # CORS para permitir acesso do frontend
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],  
+    allow_origins=["devtranslate-frontend-at3r.vercel.app"],  
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
