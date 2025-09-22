@@ -9,10 +9,14 @@ from app.routers import translate
 
 app = FastAPI(title="DevTranslate API")
 
+origins = [
+    "https://devtranslate-frontend-at3r-fasxp6zfd-bagrielzins-projects.vercel.app"
+]
+
 # CORS para permitir acesso do frontend
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["https://devtranslate-frontend-at3r-9bpismx1z-bagrielzins-projects.vercel.app"],  
+    allow_origins=origins,  
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
